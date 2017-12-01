@@ -7,19 +7,6 @@ import android.os.Bundle;
 import android.view.View;
 
 public class MainActivity extends AppCompatActivity {
-    class MyTask extends AsyncTask<Integer,Void,String>{
-
-        @Override
-        protected String doInBackground(Integer... params) {
-            return null;
-        }
-
-        protected void onProgressUpdate(Integer... values) {
-            int p = values[0];
-            gv.postInvalidate();
-        }
-    }
-
 
     GraphicsView gv;
 
@@ -30,9 +17,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(gv);
     }
 
-    public void onClick(View view)
-    {
-        MyTask task = new MyTask();
-        task.execute();
+    public void onClick(View view) {
+       /* MyTask task = new MyTask();
+        task.execute();*/
     }
 }
